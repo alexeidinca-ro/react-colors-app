@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import MiniPalette from './MiniPalette';
 import {Link} from 'react-router-dom';
-import {withStyles} from '@material-ui/styles';
 import styles from './styles/PaletteListStyles';
 import {CSSTransition,TransitionGroup,} from 'react-transition-group';
+import {withStyles} from '@material-ui/styles';
 import Avatar from '@material-ui/core/Avatar';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -27,6 +27,7 @@ class PaletteList extends Component{
         this.openDelete = this.openDelete.bind(this);
         this.closeDelete = this.closeDelete.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.goToPalette = this.goToPalette.bind(this);
     }
 
     openDelete(id){
@@ -70,7 +71,7 @@ class PaletteList extends Component{
                                             key={pal.id} 
                                             id={pal.id} 
                                             {...pal} 
-                                            handleClick={() => this.goToPalette(pal.id)} 
+                                            goToPalette={this.goToPalette} 
                                             openDialog={this.openDelete}
                                         />
                                     </CSSTransition>
