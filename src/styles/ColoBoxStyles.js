@@ -6,22 +6,23 @@ export default {
         width: "20%",
         height: props => (props.showingFullPalette ? "25%" : "50%"),
         position: "relative",
-        margin: "0 auto",
+        margin: "0",
         display: "inline-block",
         cursor: "pointer",
-        marginTop: "-4px",
         "&:hover button": {
             opacity: 1
         },
         [sizes.down("lg")]: {
-            width: "33.3333%"
+            width: "33.3333%",
+            height: props => (props.showingFullPalette ? "14%" : "25%")
         },
         [sizes.down("md")]: {
-            width: "50%"
+            width: "50%",
+            height: props => (props.showingFullPalette ? "10%" : "20%")
         },
         [sizes.down("xs")]: {
             width: "100%",
-            height: props => (props.showingFullPalette ? "15%" : "25%")
+            height: props => (props.showingFullPalette ? "5%" : "10%")
         }
     },
     copyText: {

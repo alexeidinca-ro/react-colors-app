@@ -1,3 +1,5 @@
+import sizes from './sizes';
+
 export default {
     Palette: {
         height: "100vh",
@@ -5,16 +7,18 @@ export default {
         flexDirection: "column"
     },
     paletteColors: {
-        height: "90%"
+        height: "calc(100% - 100px)",
+        display: "flex",
+        flexFlow: "row wrap",
+        justifyContent: "flex-start"
     },
     goBack: {
         width: "20%",
         height: "50%",
         position: "relative",
-        margin: "0 auto",
+        margin: "0",
         display: "inline-block",
         cursor: "pointer",
-        marginTop: "-4px",
         opacity: "1",
         backgroundColor: "black",
         "& a": {
@@ -35,6 +39,18 @@ export default {
             textTransform: "uppercase",
             border: "none",
             textDecoration: "none",
+        },
+        [sizes.down("lg")]: {
+            height: "25%",
+            width: "100%"
+        },
+        [sizes.down("md")]: {
+            height: "20%",
+            width: "50%"
+        },
+        [sizes.down("xs")]: {
+            height: "10%",
+            width: "100%"
         }
     }
 }

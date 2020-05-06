@@ -1,15 +1,16 @@
+import sizes from './sizes';
+
 export default {
     Navbar:{
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
-        height: "6vh",
-        marginBottom: "4px"
+        height: "50px"
     },
     logo:{
         marginRight: "15px",
         padding: "0 13px",
-        fontSize: "20px",
+        fontSize: "16px",
         background: "#eceff1",
         height: "100%",
         display: "flex",
@@ -17,12 +18,18 @@ export default {
         "& a": {
             textDecoration: "none",
             color: "black"
-        }
+        },
+        [sizes.down("sm")]:{
+            display: "none"
+        },
     },
     slider:{
         width: "340px",
         margin: "0px 10px",
         display: "inline-block",
+        [sizes.down("lg")]:{
+            width: "150px"
+        },
         "& .rc-slider-rail":{
             height: "10px"
         },

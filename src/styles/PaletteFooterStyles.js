@@ -3,7 +3,7 @@ export default {
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-end",
-        height: "5vh",
+        height: "50px",
         fontWeight: "bold",
         backgroundColor: "#fff",
     },
