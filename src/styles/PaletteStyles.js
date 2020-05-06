@@ -10,7 +10,8 @@ export default {
         height: "calc(100% - 100px)",
         display: "flex",
         flexFlow: "row wrap",
-        justifyContent: "flex-start"
+        justifyContent: "flex-start",
+        alignContent: "flex-start"
     },
     goBack: {
         width: "20%",

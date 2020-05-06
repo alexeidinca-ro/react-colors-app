@@ -42,24 +42,18 @@ export default {
         justifyContent: "space-between",
         color: "white",
         alignItems: "center",
-        padding: "10px 0px",
+        padding: "10px 15px",
         "& a":{
             color: "white"
+        },
+        [sizes.down("xs")]:{
+            padding: "10px 0px"
         }
     },
     palettes: {
         boxSizing: "border-box",
         width: "100%",
-        display: "grid",
-        gridTemplateColumns: "repeat(3,30%)",
-        gridGap: "25px",
-        [sizes.down("lg")]:{
-            gridTemplateColumns: "repeat(2,48%)",
-            gridGap: "25px"
-        },
-        [sizes.down("xs")]:{
-            gridTemplateColumns: "repeat(1,100%)",
-            gridGap: "15px"
-        }
+        display: "flex",
+        flexFlow: "row wrap",
     }
 }

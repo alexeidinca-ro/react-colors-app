@@ -1,3 +1,5 @@
+import sizes from './sizes';
+
 export default {
     root: {
         backgroundColor: "white",
@@ -6,8 +8,17 @@ export default {
         padding: "0.5rem",
         overflow: "hidden",
         cursor: "pointer",
+        width: "calc(33.33% - 30px)",
+        margin: "0px 15px 15px",
         "&:hover svg": {
             opacity: "1"
+        },
+        [sizes.down("sm")]:{
+            width: "calc(50% - 30px)"
+        },
+        [sizes.down("xs")]:{
+            width: "100%",
+            margin: "0px 0px 15px"
         }
     },
     colors: {
